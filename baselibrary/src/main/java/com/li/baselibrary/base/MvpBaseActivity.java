@@ -43,17 +43,5 @@ public abstract class MvpBaseActivity extends AppCompatActivity implements BaseV
         activityMvpProxy.unBindPresenter();
     }
 
-    public <V extends  BaseView,M extends BaseModel> BasePresenter<V>  getPresenter(){
-        if (activityMvpProxy.getPresenters().size()>0){
-            return (BasePresenter<V>) activityMvpProxy.getPresenters().get(0);
-        }
-        return null;
 
-    }
-    public <V extends  BaseView,M extends BaseModel> BasePresenter<V>   getPresenter(int pos){
-        if (activityMvpProxy.getPresenters().size()>0&&pos<activityMvpProxy.getPresenters().size()){
-            return (BasePresenter<V>) activityMvpProxy.getPresenters().get(pos);
-        }
-        return null;
-    }
 }

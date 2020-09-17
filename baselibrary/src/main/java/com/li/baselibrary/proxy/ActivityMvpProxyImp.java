@@ -15,8 +15,5 @@ public class ActivityMvpProxyImp<V extends BaseView> extends MvpProxyImpl<V> imp
         super(view);
     }
 
-    @Override
-    public List<BasePresenter> getPresenters() {
-            return super.getPresenters();
-    }
+
 }

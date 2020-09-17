@@ -49,7 +49,5 @@ public class MvpProxyImpl<V extends BaseView> implements IMvpProxy {
         mView = null;
     }
 
-    public List<BasePresenter> getPresenters() {
-        return mPresenters;
-    }
+
 }

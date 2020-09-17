@@ -24,7 +24,6 @@ public class BasePresenter<V extends BaseView/*,M extends BaseModel*/> {
     private  V mProxyView;
     private  V mView;
 //  private M  mModel;
-    private List<BaseModel> mList = new ArrayList<>();
     public void  attach( V view){
         try {
             this.mView = view;
@@ -50,7 +49,6 @@ public class BasePresenter<V extends BaseView/*,M extends BaseModel*/> {
                     BaseModel baseModel = baseClazz.newInstance();
                     field.setAccessible(true);
                     field.set(this,baseModel);
-                    mList.add(baseModel);
                 }
             }
         } catch ( Exception e) {
